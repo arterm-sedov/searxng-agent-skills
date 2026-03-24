@@ -55,7 +55,7 @@ response = client.search(query="your query", max_results=5)
 
 ## Documentation
 
-- [TDD Experiment](docs/TDD-EXPERIMENT.md) - How these skills were perfected
+- [Skill Development](docs/SKILL-DEVELOPMENT.md) - TDD process for creating these skills
 
 ## Related
 
