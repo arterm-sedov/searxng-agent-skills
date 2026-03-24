@@ -15,11 +15,25 @@ Agent skills for [searxng-docker-tavily-adapter](https://github.com/vakovalskii/
 Docker stack from [searxng-docker-tavily-adapter](https://github.com/vakovalskii/searxng-docker-tavily-adapter):
 
 ```bash
+# 1. Clone and configure
 git clone https://github.com/vakovalskii/searxng-docker-tavily-adapter
 cd searxng-docker-tavily-adapter
+cp config.example.yaml config.yaml
+
+# 2. Generate secret key and update config
+python -c "import secrets; print(secrets.token_urlsafe(32))"
+# Edit config.yaml: replace secret_key value with generated key
+
+# 3. Start Docker stack
 docker compose up -d
-curl http://localhost:8000/health  # verify
+
+# 4. Verify
+curl http://localhost:8000/health
 ```
+
+**Endpoints:**
+- Search API: `http://localhost:8000/search`
+- SearXNG UI: `http://localhost:8999`
 
 ## Installation
 
