@@ -2,7 +2,7 @@
 name: searxng-cli
 description: |
   Use when the user wants web search, content extraction, or says "free alternative to Tavily", "self-hosted search", "local search API", "no API key", "private search", "SearXNG" — AND wants a free, unlimited, local alternative to Tavily with no API keys or rate limits. Provides search and extraction via local Docker deployment.
-compatibility: Requires Docker stack at D:/Repos/searxng-docker-tavily-adapter (run `docker compose up -d`)
+compatibility: Requires Docker stack at D:/Repo/searxng-docker-tavily-adapter (run `docker compose up -d`)
 allowed-tools: Bash(curl *)
 ---
 
@@ -16,7 +16,7 @@ Free, unlimited web search and content extraction via local Docker. No API key r
 curl -s http://localhost:8000/health || echo "Docker stack not running"
 ```
 
-If down: `cd D:/Repos/searxng-docker-tavily-adapter && docker compose up -d`
+If down: `cd D:/Repo/searxng-docker-tavily-adapter && docker compose up -d`
 
 ## Workflow
 
