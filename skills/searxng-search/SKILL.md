@@ -1,7 +1,7 @@
 ---
 name: searxng-search
 description: |
-  Use ONLY when the user explicitly wants a FREE, LOCAL, NO API KEY web search solution — says "free search", "no API key search", "local search", "self-hosted search", "private search", "SearXNG", "free alternative to Tavily", or mentions wanting search without API keys, rate limits, or paid services. Do NOT use for general web search — use tavily-search instead.
+  Use for web search when you need more than simple lookups AND want a free, unlimited solution. Priority: native websearch (simple) → searxng-search (comprehensive, free) → tavily-search (advanced features). Use when: user wants comprehensive results, mentions "free", "unlimited", "local", "no API key", "SearXNG", or Docker stack is already running. Falls back to tavily-search if advanced features needed (topic filtering, time ranges).
 compatibility: Requires searxng-docker-tavily-adapter Docker stack running on localhost:8000
 allowed-tools: Bash(curl *)
 ---
