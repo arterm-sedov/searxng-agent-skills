@@ -2,7 +2,7 @@
 name: searxng-extract
 description: |
   Use when the user has URLs and wants their content, says "extract", "grab the content from", "pull the text from", "get the page at", "read this webpage" — AND mentions "free", "no API key", "local", "private", or wants a free alternative to Tavily extract. Extracts clean text via local Docker deployment.
-compatibility: Requires Docker stack at D:/Repo/searxng-docker-tavily-adapter (run `docker compose up -d`)
+compatibility: Requires searxng-docker-tavily-adapter Docker stack running on localhost:8000
 allowed-tools: Bash(curl *)
 ---
 
@@ -10,13 +10,19 @@ allowed-tools: Bash(curl *)
 
 Extract clean text from URLs via local SearXNG. No API key required.
 
-## Prerequisites Check
+## Prerequisites
+
+Requires [searxng-docker-tavily-adapter](https://github.com/vakovalskii/searxng-docker-tavily-adapter) running locally.
 
 ```bash
-curl -s http://localhost:8000/health || echo "Docker stack not running"
+# Check if running
+curl -s http://localhost:8000/health
 ```
 
-If down: `cd D:/Repo/searxng-docker-tavily-adapter && docker compose up -d`
+If not running, start the Docker stack in your adapter directory:
+```bash
+docker compose up -d
+```
 
 ## When to use
 
@@ -54,7 +60,7 @@ Note: SearXNG extracts via search + scraping. For direct URL, search for the spe
 
 ## Configuration
 
-Edit `D:/Repo/searxng-docker-tavily-adapter/config.yaml`:
+Edit `config.yaml` in your adapter directory:
 
 ```yaml
 adapter:

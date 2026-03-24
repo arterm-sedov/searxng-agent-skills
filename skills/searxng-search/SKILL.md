@@ -2,7 +2,7 @@
 name: searxng-search
 description: |
   Use when the user wants to search the web, find articles, look up information, get recent news, discover sources, or says "search for", "find me", "look up", "what's the latest on", "find articles about" — AND mentions "free", "no API key", "local", "private", "self-hosted", "without paying", or wants an alternative to Tavily. Free, unlimited web search via local Docker deployment.
-compatibility: Requires Docker stack at D:/Repo/searxng-docker-tavily-adapter (run `docker compose up -d`)
+compatibility: Requires searxng-docker-tavily-adapter Docker stack running on localhost:8000
 allowed-tools: Bash(curl *)
 ---
 
@@ -10,13 +10,19 @@ allowed-tools: Bash(curl *)
 
 Free, unlimited web search via local SearXNG. No API key required.
 
-## Prerequisites Check
+## Prerequisites
+
+Requires [searxng-docker-tavily-adapter](https://github.com/vakovalskii/searxng-docker-tavily-adapter) running locally.
 
 ```bash
-curl -s http://localhost:8000/health || echo "Docker stack not running"
+# Check if running
+curl -s http://localhost:8000/health
 ```
 
-If down: `cd D:/Repo/searxng-docker-tavily-adapter && docker compose up -d`
+If not running, start the Docker stack in your adapter directory:
+```bash
+docker compose up -d
+```
 
 ## When to use
 
