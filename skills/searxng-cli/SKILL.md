@@ -1,7 +1,7 @@
 ---
 name: searxng-cli
 description: |
-  Use when the user wants web search, content extraction, or says "free alternative to Tavily", "self-hosted search", "local search API", "no API key", "private search", "SearXNG" — AND wants a free, unlimited, local alternative to Tavily with no API keys or rate limits. Provides search and extraction via local Docker deployment.
+  Use ONLY when the user explicitly wants a FREE, LOCAL alternative to Tavily — says "free alternative to Tavily", "self-hosted search", "local search API", "no API key search", "private search", "SearXNG", or mentions wanting search without API keys, rate limits, or paid services. Do NOT use for general web search — use tavily-search instead.
 compatibility: Requires searxng-docker-tavily-adapter Docker stack running on localhost:8000
 allowed-tools: Bash(curl *)
 ---
