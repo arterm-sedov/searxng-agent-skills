@@ -1,6 +1,6 @@
 # SearXNG Agent Skills
 
-Free, unlimited web search skills for AI agents - a local alternative to Tavily.
+Agent skills for [searxng-docker-tavily-adapter](https://github.com/vakovalskii/searxng-docker-tavily-adapter) - free, unlimited web search for AI agents.
 
 ## Skills
 
@@ -10,22 +10,23 @@ Free, unlimited web search skills for AI agents - a local alternative to Tavily.
 | `searxng-search` | Web search with LLM-optimized results |
 | `searxng-extract` | URL content extraction |
 
+## Prerequisites
+
+Docker stack from [searxng-docker-tavily-adapter](https://github.com/vakovalskii/searxng-docker-tavily-adapter):
+
+```bash
+git clone https://github.com/vakovalskii/searxng-docker-tavily-adapter
+cd searxng-docker-tavily-adapter
+docker compose up -d
+curl http://localhost:8000/health  # verify
+```
+
 ## Installation
 
 Copy skills to your agent's skills directory:
 
 ```bash
 cp -r skills/* ~/.agents/skills/
-```
-
-## Prerequisites
-
-Docker stack running at `D:/Repos/searxng-docker-tavily-adapter`:
-
-```bash
-cd D:/Repos/searxng-docker-tavily-adapter
-docker compose up -d
-curl http://localhost:8000/health  # verify
 ```
 
 ## Quick Start
@@ -52,10 +53,6 @@ response = client.search(query="your query", max_results=5)
 | API key required | No keys |
 | Rate limits | No limits |
 | External service | Local |
-
-## Documentation
-
-- [Skill Development](docs/SKILL-DEVELOPMENT.md) - TDD process for creating these skills
 
 ## Related
 
