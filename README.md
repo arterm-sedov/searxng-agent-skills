@@ -9,6 +9,34 @@ Agent skills for [searxng-docker-tavily-adapter](https://github.com/vakovalskii/
 | `searxng-cli` | Overview, workflow, endpoints |
 | `searxng-search` | Web search with LLM-optimized results |
 | `searxng-extract` | URL content extraction |
+| `browser-switch` | Choose between agent-browser and Playwright CLI |
+
+## Why SearXNG Skills Exist
+
+Web search is essential for AI agents, but most solutions require paid APIs with rate limits. The SearXNG skills exist to provide a free, unlimited, local alternative that works seamlessly with AI agent workflows.
+
+- **Free** — No API keys, no subscriptions, no limits
+- **Local** — Runs on your machine via Docker
+- **Unlimited** — No rate limits or quotas
+- **Drop-in replacement** — Compatible with Tavily client
+
+These skills provide specialized interfaces for different search tasks: general search, content extraction, and CLI overview.
+
+## Why browser-switch Exists
+
+There are two main CLI tools for browser automation:
+
+- **agent-browser** (Vercel) — Rust-based, ultra-fast, 5.7x more token-efficient
+- **Playwright CLI** (Microsoft) — Node.js-based, mature, cross-browser support
+
+Both are excellent. The problem: knowing which one to use for a given task isn't always obvious. This skill provides clear guidance on when to pick which tool.
+
+| Need | Use |
+|------|-----|
+| Max speed & token efficiency | agent-browser |
+| Firefox/Safari/Edge support | Playwright CLI |
+| AI agent workflows | agent-browser |
+| Formal testing | Playwright CLI |
 
 ## Prerequisites
 
