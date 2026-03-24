@@ -19,10 +19,19 @@ Requires [searxng-docker-tavily-adapter](https://github.com/vakovalskii/searxng-
 curl -s http://localhost:8000/health
 ```
 
-If not running, start the Docker stack in your adapter directory:
+If not running, ask user for permission to set up:
+
 ```bash
+# Clone and configure (with user permission)
+git clone https://github.com/vakovalskii/searxng-docker-tavily-adapter
+cd searxng-docker-tavily-adapter
+cp config.example.yaml config.yaml
+# Generate secret key and update config.yaml
+python -c "import secrets; print(secrets.token_urlsafe(32))"
 docker compose up -d
 ```
+
+Or start existing stack: `docker compose up -d`
 
 ## Workflow
 
