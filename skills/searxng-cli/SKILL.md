@@ -1,7 +1,7 @@
 ---
 name: searxng-cli
 description: |
-  Use for web search and content extraction when you want a free, unlimited, local solution. Priority: native websearch (simple) → searxng (comprehensive, free) → tavily (advanced features). Use when: user wants comprehensive results without API keys, mentions "free", "unlimited", "local", "SearXNG", "no API key", or Docker stack is already running. Falls back to tavily if advanced features needed (research synthesis, JS rendering).
+  Use for web search and content extraction when you want a free, unlimited, local solution. Priority: native websearch (simple) → searxng (comprehensive, free) → tavily (advanced features). Use when: user wants comprehensive results without API keys, mentions "free", "unlimited", "local", "SearXNG", "no API key", or searxng-docker-tavily-adapter stack is running. Falls back to tavily if advanced features needed (research synthesis, JS rendering).
 compatibility: Requires searxng-docker-tavily-adapter Docker stack running on localhost:8000
 allowed-tools: Bash(curl *)
 ---

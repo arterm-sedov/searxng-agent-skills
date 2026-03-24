@@ -1,7 +1,7 @@
 ---
 name: searxng-extract
 description: |
-  Use for URL content extraction when you want a free, unlimited, local solution. Priority: searxng-extract (free, basic) → tavily-extract (advanced features). Use when: user wants page content without API keys, mentions "free", "local", "SearXNG", or Docker stack is already running. Falls back to tavily-extract if advanced features needed (JS rendering, query-focused chunking).
+  Use for URL content extraction when you want a free, unlimited, local solution. Priority: searxng-extract (free, basic) → tavily-extract (advanced features). Use when: user wants page content without API keys, mentions "free", "local", "SearXNG", or searxng-docker-tavily-adapter stack is running. Falls back to tavily-extract if advanced features needed (JS rendering, query-focused chunking).
 compatibility: Requires searxng-docker-tavily-adapter Docker stack running on localhost:8000
 allowed-tools: Bash(curl *)
 ---
